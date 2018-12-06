@@ -38,7 +38,7 @@ app.get("/bad", (request, response) => {
     response.send({ errorMessage: "Page not found"}); //Express automatically adjust the content type and serve it
 });
 
-
-app.listen(3000, () => {
+let port = process.env.PORT || 3000;
+app.listen(process.env.PORT, () => {
     console.log("Server is up at port 3000");
 }); // bind the app to a port and start to listen
